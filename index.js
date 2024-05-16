@@ -3,7 +3,7 @@
 // Билет с номером 385916 — счастливый, так как 3 + 8 + 5 === 9 + 1 + 6. Билет с номером 231002 не является счастливым, так как 2 + 3 + 1 !== 0 + 0 + 2.
 
 // isHappyTicket.js
-// Реализуйте и экспортируйте по умолчанию функцию, проверяющую является ли номер счастливым (номер — всегда строка). Функция должна возвращать true, если билет счастливый, или false, если нет.
+// Реализуйте функцию, проверяющую является ли номер счастливым (номер — всегда строка). Функция должна возвращать true, если билет счастливый, или false, если нет.
 
 const isHappyTicket = (num) => {
     let numToStr = String(num);
@@ -27,3 +27,18 @@ isHappyTicket('231002'); // false
 isHappyTicket('1222');   // false
 isHappyTicket('054702'); // true
 isHappyTicket('00');  // true
+
+// invertCase.js
+// Реализуйте и экспортируйте по умолчанию функцию, которая меняет в строке регистр каждой буквы на противоположный. Функция должна возвращать полученный результат
+const invertCase = (str) => {
+    let result = "";
+    for(let i = 0; i < str.length; i++){
+        if(str[i] == str[i].toUpperCase()){
+            result += str[i].toLowerCase();
+        }else{
+            if(str[i] == str[i].toLowerCase()) result += str[i].toUpperCase();
+        }
+    }
+    return result;
+}
+console.log(invertCase("Hello world! ds w"))
